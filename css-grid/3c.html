@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3column-layout</title>
+</head>
+<style>
+    .a{
+        display: grid;
+        grid-template-columns: repeat(3,100px );
+        grid-template-rows: repeat(3,100px);
+    
+        
+        column-gap: 10px;
+        justify-content: center;
+        
+    }
+    .b{
+        display: grid;
+        border: 2px solid black;
+        align-items: center;
+        justify-content: center;
+        
+        
+        
+    }
+</style>
+<body>
+    <div class="a">
+       <div class="b" style="background-color: aquamarine;">
+        <b >1</b>
+        </div>
+        <div class="b" style="background-color: blueviolet;">
+        <b>2</b>
+        </div>
+       <div class="b" style="background-color: brown;">
+        <b>3</b>
+       </div>
+
+    </div>
+    
+</body>
+</html>
