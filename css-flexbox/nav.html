@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+    }
+    .div{
+        display: flex;
+        justify-content: space-between;
+       
+        background-color: bisque;
+    }
+    .logo
+    {
+        margin-top: 3px;
+        margin-left: 3px;
+    }
+    
+    .form{
+        margin-left: 150px;
+        height: 100vh;
+        display: flex;
+        margin-top: 10px;
+        
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    
+</style>
+<body>
+    <div class="div">
+        <nav class="logo">
+            <img src="img/max.jpg" width="30px" height="30px">
+        </nav>
+        <nav class="menu"> 
+            <a href="home.html">Home</a>
+            <a href="contact.html" >Contact</a>
+            <a href="location.html">About Us </a>
+        </nav>
+       
+    </div>
+    <div class="form"> 
+        <form>
+            <label for="namee">Name</label>
+            <input class="a" type="text" name="namee" placeholder="enter your name"><br><br>
+            <label for="age">Age</label>
+            <input class="a" type="number" name="age" placeholder="Enter your age"><br><br>
+            <label for="email">Email ID</label>
+            <input class="a" type="email"  name="email" placeholder="Enter your email"><br><br>
+            <label for="num">Mobile number</label>
+            <input class="a" type="tel" minlength="10" name="num" placeholder="Enter your number"><br><br>
+            <button>Sign in </button>
+
+        </form>
+    </div>
+</body>
+</html>
