@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+</head>
+<style>
+    *{
+        margin: 0;
+    }
+   body{
+    display: grid;
+    grid-template-rows:100px 1fr 100px ;
+    height: 100vh;
+    
+   
+   }
+   .parent{
+     display: grid;
+     grid-template-columns: 150px 1fr;
+   }
+  
+   header,div,aside,footer{
+    border: 1px solid black;
+   }
+   header{
+    background-color: aqua;
+    justify-items: center;
+    
+   }
+   h3{
+    background-color: beige;
+    text-align: center;
+   }
+   .p{
+    margin-top: 100px;
+   }
+  
+</style>
+<body>
+    <header>
+        <h1>
+           This is the Header Part 
+        </h1>
+
+    </header>
+    <div class="parent">
+         <aside>
+            <h2>Sidebar</h2>
+        <ul>    
+        <li>Search</li>
+        <li>Options</li>
+        <li>Settings</li>
+        <li>Profile</li>
+        </ul>
+    </aside>
+    <div>
+
+        <h3 >This is the content</h3>
+        <p class="p">CSS Grid is a powerful layout system in CSS used to arrange elements in rows and columns. It helps developers create complex and responsive web page layouts easily. To use CSS Grid, a container is given the property display: grid, and the number of rows and columns can be defined using properties such as grid-template-columns and grid-template-rows. CSS Grid provides features like spacing between items using gap, alignment of items, and flexible sizing of rows and columns. It is commonly used for photo galleries, dashboards, web page layouts, and other designs that require organized placement of elements.</p>
+    </div>
+   
+    </div>
+    <footer style="background-color: bisque;">
+        <p>&copy 2026</p>
+        <p>About Us</p>
+        <p>contact Us
+        </p>
+        <address>123/A4, XXXXXXX,India</address>
+    </footer>    
+</body>
+</html>
