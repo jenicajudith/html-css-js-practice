@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card layout</title>
+</head>
+<style>
+   
+    
+    .card{
+        display: grid;
+        grid-template-columns:repeat(4, 1fr);
+        height: 100vh;
+        margin: 0;
+
+
+    }
+    
+    @media screen and (max-width:768px)
+     {
+        
+        .card{
+        display: grid;
+        grid-template-columns:repeat(2, 1fr);
+        height: 100vh;
+        margin: 0;
+
+
+    }
+    
+
+        
+    }
+    
+</style>
+<body>
+    <div class="card">
+        <div class="col" style="background-color: aqua;">
+            <b>FIRST</b>
+        </div>
+        <div class="col" style="background-color: brown;">
+            <b>SECOND</b>
+        </div>
+        <div class="col" style="background-color: aquamarine;">
+            <b>THIRD</b>
+        </div>
+        <div class="col" style="background-color: rgb(255, 0, 0);">
+            <b>FOURTH</b>
+        </div>
+    </div>
+</body>
+</html>
