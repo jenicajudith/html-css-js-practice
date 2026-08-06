@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card 3</title>
+</head>
+<style>
+    body{
+        margin:0;
+        height: 100vh;
+        width: 100vw;
+         display:flex;
+          background-color: rgb(73, 73, 184);
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .main{
+    display:flex;
+    width:70%;
+    height: 80%;
+    gap: 0;
+    
+    border-radius:20px;
+    overflow:hidden;
+    
+}
+    .left{
+        display: flex;
+        width: 60%;
+        background-color: white;
+        
+        position: relative;
+        
+       
+    }
+    .right{
+        display:flex;
+        width: 50%;
+        position: relative;
+        background-color: rgb(19, 19, 62);
+        align-content: center;
+       align-items: center;
+       justify-content: center;
+        z-index: 0;
+        
+    }
+    .font{
+        position: absolute;
+        z-index: 1;
+        font-size: xx-large;
+        color: blueviolet;
+        text-align: left;
+        padding-top:450px;
+    }
+    .f{
+        position: absolute;
+        z-index: 1;
+        height: 50px;
+        width: 50px;
+        padding: 10%;
+        
+
+
+    }
+    .h{
+        position: absolute;
+        z-index: 1;
+        font-size: xx-large;
+        padding-inline: 30%;
+        padding-top: 10%;
+
+
+    }
+    label{
+        
+        color: white;
+
+        
+    }
+    input{
+       
+        width: 100%;
+        border-radius: 10px;
+        height: 100%;
+        
+       
+    }
+    form{
+       width: 70%;
+        display: grid;
+        grid-row: 6;
+       
+    }
+    button{
+        
+        
+        height: 40px;
+        border-radius: 15px;
+        background-color: rgb(101, 101, 250);
+       
+    }
+  
+    
+
+    
+</style>
+<body>
+    <div class="main">
+        <div class="left">
+            <img src="img\lap.jpg">
+            <p class="font"><b>GET IN TOUCH</b></p>
+            <img  class="f" src="img\fb.png">
+            <p class="h">❤️REGARDS</p>
+
+        </div>
+        <div class="right">
+            <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name" >
+        <br>
+
+        <label for="company">Company</label>
+        <input type="text" id="company" placeholder="Enter your company name" >
+           <br>
+        <label for="phone">Phone</label>
+        <input type="phone number" id="phone" placeholder="Enter your number" /><br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" /><br>
+
+        <label for="message">Message</label>
+        <textarea style="border-radius: 10px;" id="message" rows="7" placeholder="Enter your message"></textarea><br>
+
+        <button type="button">Send Message</button>
+         </form>
+        </div>
+    </div>
+    
+</body>
+</html>
