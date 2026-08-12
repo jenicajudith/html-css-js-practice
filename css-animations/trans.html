@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .ptag{
+        background-color: black;
+        width: 100px;
+        height: 100px;
+                 color: white;
+          transition: all 10s ease 0s;
+          /* property , duration , timein function , delay  */
+         /* transition-duration:10s;
+         transition-delay: 0s;*/
+
+          text-align: center;
+        align-content: center; 
+   
+        /* transition-timing-function:cubic-bezier(0.5, 1, 1, 1);/*inspect- style -timing function*/
+        /* transition-property:margin-left, border-radius; this alone delays    */
+    } 
+
+    .ptag:hover{
+        background-color: blue;
+        
+
+        margin-left: 500px;
+        height: 200px;
+        width: 209px;
+        border-radius: 50px;
+        text-align: center;
+        align-content: center;
+        color: brown;
+    }
+
+    .ani{
+        background-color: aqua;
+        height: 200px;
+        width: 200px;
+        /* transition-duration: 5s;
+        transition-delay: 2s; */
+        transition: background-color 15s 2s,width 10s ease-in 2s;
+
+    }
+    .ani:hover{
+        background-color: blueviolet;
+        width: 100%;
+        color: brown;
+    }
+    h1{
+        background-color: antiquewhite;
+        width: 100px;
+        height: 100px;
+        animation-name: h1-animation;
+        animation-duration: 5s;
+        animation-delay: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        animation-play-state: running;
+        animation-fill-mode: backwards;
+    }
+    @keyframes h1-animation{
+        50%{
+            background-color: black;
+        }
+        70%{
+            margin-left: 200px;
+            background-color: aqua;
+        }
+        90%{
+            margin-top: 100px;
+            background-color: rgb(233, 136, 19);
+        }
+    }
+</style>
+<body>
+    <p class="ptag">white</p>
+     <img src="img\work.png" class="ani">transition</p><!-- time frame  -->
+     <h1 ></h1>
+</body>
+</html>
