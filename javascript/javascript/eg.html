@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function color(){
+            let op=document.getElementsByTagName("select")[0];
+            console.log(op.value);
+            switch(op.value){
+                case "one":
+                    // op.parentElement.style.color="red";
+                    op.parentElement.style.backgroundColor="green"
+                    break;
+                case "two":
+                    op.parentElement.style.backgroundColor="blue";
+                     break;
+                case "three":
+                    op.parentElement.style.backgroundColor="yellow";
+                    break;
+            }
+        }
+        
+    </script>
+   
+</head>
+<body>
+    <p>hello</p>
+    <p>this is judi</p>
+    <select onchange="color()">
+        <option >select </option>
+        <option value="one">one</option>
+        <option value="two">two</option>
+        <option value="three"> three</option>
+    </select>
+    <button >click</button>
+
+    
+</body>
+</html>

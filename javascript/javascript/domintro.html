@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom concept</title>
+    <script>
+        function update(){
+            let term=document.getElementsByTagName("p");
+            let value1=Number(document.getElementsByClassName("value")[0].value);
+            let value2=Number(document.getElementsByClassName("value")[1].value);
+
+            // term.textContent="This is judi";
+            // term.style.color="red";
+
+            for(let terms of term){ //update all the terms in the array
+                console.log(term);
+            
+           
+            let c=value1+value2;
+            terms.innerHTML=`<h1>Updated term  ${c} </h1>`;
+            }
+        }
+        function id_fun(){
+            let get=document.getElementById("getin").value;
+            console.log(get.length);
+            let set=document.getElementById("result");
+            set.innerHTML=`<p>result:${get.length}</p>`
+
+        }
+        function change(){
+            let content=document.querySelectorAll(".query")[0];
+            content.textContent="update data";
+        }
+        function load(){
+            setTimeout(()=>{
+           let load=document.getElementById("loading");
+           let data=document.getElementById("data");
+            load.style.display="none";
+            data.style.display="block";
+         
+            load.style.display="none";
+            data.style.display="block";
+        },1000)
+        } 
+    </script>
+    <style>
+        #load{
+           display:block;
+        }
+        #data{
+            display: none;
+        }
+    </style>
+</head>
+<body onload="load()">
+    <div id="loading">
+        <div id="data">
+    <p> Hello world</p>  
+    <p> heyyyy</p>  
+    <input type="number"class="value" placeholder="enter value">
+    <br>
+    <input type="number" class="value" placeholder="enter value">
+    <button onclick="update()"> click</button>
+    <hr>
+    <input type="type" id="getin" oninput="id_fun" placeholder="enter value">
+    <div id="result">
+       
+    </div>
+
+   <input type="text" >
+   </div>
+   <div>
+   <p class="query" id="term">demo demo</p>
+   <p class="query"> 1-demo</p>
+   <button onclick="change()">click</button>
+   </div>
+   <
+  
+      
+
+</body>
+</html>

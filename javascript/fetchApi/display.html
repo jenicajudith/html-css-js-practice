@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function display(){
+        fetch("https://0qxvc817-8080.inc1.devtunnels.ms/Display",{
+            method:"get"
+        })
+        .then((response)=>{
+                console.log(response);
+          return response.json()
+            }).then((data)=>{
+               console.log(data);
+               let tag= document.getElementsByTagName("tbody")[0];
+               for(let datas of data){
+                  console.log(datas);
+                  let row=`<tr>
+                    <td>${datas.id}</td>
+                    <td>${datas.age}</td>
+                    <td>${datas.name}</td>
+                    <td>${datas.password}</td>
+                    </tr>`;
+                   tag.innerHTML+=row;
+
+               }
+            })
+           .catch((reject)=>{
+             console.log("error")
+            })
+        
+        
+
+    }
+    async function  store(){
+        
+            
+            let inage=document.getElementsByTagName("input")[0].value;
+            let inname=document.getElementsByTagName("input")[1].value;
+            let inpass=document.getElementsByTagName("input")[2].value;
+ let inputs={
+   age: inage,
+    name: inname,
+    password: inpass
+   
+ }
+      
+            try {
+                const response=await fetch("https://0qxvc817-8080.inc1.devtunnels.ms/Save",{
+                    method:"post",
+                    headers:{
+                        "content-type":"application/json"
+                    },
+                    body:JSON.stringify(inputs)
+                })
+                const datas=await response.json();
+                console.log(datas);
+                console.log("data",datas);
+      let tag= document.getElementsByTagName("tbody")[0];
+
+                  console.log(datas);
+                  let row=`<tr>
+                    <td>${datas.id}</td>
+                    <td>${datas.age}</td>
+                    <td>${datas.name}</td>
+                    <td>${datas.password}</td>
+                    </tr>`;
+                   tag.innerHTML+=row;
+            } catch (error) {
+                console.log("error");
+            }
+
+    }
+    
+        async function update(){
+             let inid=document.getElementsByTagName("input")[0].value;
+           let inage=document.getElementsByTagName("input")[1].value;
+            let inname=document.getElementsByTagName("input")[2].value;
+            let inpass=document.getElementsByTagName("input")[3].value;
+ let inputs={
+    id:inid,
+   age: inage,
+    name: inname,
+    password: inpass
+   
+   
+ }
+            try {
+                const response=await fetch("https://0qxvc817-8080.inc1.devtunnels.ms/Update",{
+                    method:"put",
+                    headers:{
+                        "content-type":"application/json"
+                    },
+                    body:JSON.stringify(inputs)
+                })
+                const datas=await response.text();
+                console.log(datas);
+                console.log("data",datas);
+      let tag= document.getElementsByTagName("tbody")[0];
+
+                  console.log(datas);
+                  let row=`<tr>
+                    <td>${datas.id}</td>
+                    <td>${datas.age}</td>
+                    <td>${datas.name}</td>
+                    <td>${datas.password}</td>
+                    </tr>`;
+                   tag.innerHTML+=row;
+            } 
+            catch (error) {
+                console.log("error");
+            }
+ }
+ 
+
+</script>
+<body onload="display()">
+    <table border="2">
+        <thead>
+             <th>id</th>
+              <th>age</th>
+            <th>Name</th>
+           
+            
+            <th>password</th>
+           
+        </thead>
+        <tbody>
+            </tbody>
+    </table>
+        <input type="text"  placeholder="Enter ID">
+
+    <input type="text"  placeholder="Enter your age">
+    <input type="text" placeholder="Enter  your name">
+    <input type="text" placeholder="Enter your password">
+    <button onclick="store()" >Add</button>
+     <button onclick="update()" >update</button>
+
+    
+</body>
+</html>

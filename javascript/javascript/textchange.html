@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function update(){
+            let change=document.getElementsByTagName("p")[0];
+            change.textContent="This is my updated page";
+            change.style="color:red";
+            
+        }
+
+    </script> 
+</head>
+<body>
+    <p>Hello this is my page</p>
+    <button onclick="update()">Click</button>
+    
+</body>
+</html>

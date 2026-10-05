@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="cal.css">
+    <script>
+        let int=document.getElementById("ab");
+        let num=document.querySelectorAll("button");
+        for(let val of num){
+           val=addEventListener("click",function(){
+            int.value+=val;
+           });
+            
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="main">
+       
+        <div class="first">
+             <input id="ab" type="text">
+
+        </div>
+            <button  class="c" oninput="click()">AC</button>
+           
+            <button class="op" onclick="click()">%</button>
+            <button class="op" onclick="click()">÷</button>
+            <button class="a" onclick="click()">7</button>
+            <button class="a" onclick="click()">8</button>
+            <button class="a" onclick="click()">9</button>
+            <button class="op" onclick="click()">*</button>
+            <button class="a" onclick="click()">4</button>
+            <button class="a" onclick="click()">5</button>
+            <button class="a" onclick="click()">6</button>
+            <button class="op" onclick="click()">-</button>
+            <button class="a" onclick="click()">1</button>
+            <button class="a" onclick="click()">2</button>
+            <button class="a" onclick="click()">3</button>
+            <button class="op" onclick="click()">+</button>
+            <button class="a" onclick="click()">0</button>
+            <button class="a" onclick="click()">.</button>
+            <button class="b">=</button>
+        
+
+    </div>
+    
+</body>
+</html>

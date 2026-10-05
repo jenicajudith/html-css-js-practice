@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function chars(){
+            let num=document.getElementById("char").value;
+            let val=num.length;
+            let a=document.getElementById("count")
+            a.innerHTML="Character Count:"+val;
+        }
+    </script>
+</head>
+<body>
+    <p class="a">This is my paragraph: </p>
+    <textarea type="text" oninput="chars()" id="char" style="width: 100% ;height: 200px;"></textarea>
+    <p id="count"> Character Count:0</p>
+</body>
+</html>
