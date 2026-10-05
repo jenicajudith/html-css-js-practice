@@ -108,17 +108,6 @@ Building responsive components using the Bootstrap framework.
 
 ---
 
-### ⚡ JavaScript Basics
-Learning core JavaScript from scratch — syntax, logic, functions, and data structures.
-
-| File | What it covers |
-|------|----------------|
-| `jsintro.html` | Variables (var/let/const), arrow functions, callbacks, closures, rest parameters |
-| `loop.html` | Conditionals, if/else, grading logic, for loops, vowel counter |
-| `stringfun.html` | 18 string methods — split, reverse, slice, trim, padEnd, charCodeAt and more |
-| `math.html` | Math object — round, ceil, floor, min, max, random |
-| `collections.html` | Arrays, Set, Map — add, delete, iterate, splice |
-| `text.html` | Array methods — map, filter, reduce, find, splice, spread operator |
 
 ---
 
@@ -143,7 +132,7 @@ Mini projects that combine multiple concepts together.
 ## 📈 Progress
 
 This repo is updated daily as I work through my FSD course modules.  
-Currently in: **JavaScript Module** (ES6, Arrays, Collections, Functions)
+
 
 ---
 
