@@ -1,4 +1,4 @@
-# 🌐 HTML, CSS & JavaScript Practice — Full Stack Development Course
+# 🌐 HTML, CSS Practice — Full Stack Development Course
 
 A collection of projects and exercises built during my Full Stack Development (FSD) course.  
 This repository documents my learning journey — from writing my first HTML tag to building responsive layouts and JavaScript programs.
