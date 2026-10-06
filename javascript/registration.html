@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+
+
+<body>
+    
+    <form onsubmit="return validate()&&password()&&confirmpass()">
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="enter your name" >
+        <p style="color: red;" id="p1"></p>
+        
+        <label for="email">Email</label>
+        <input  id="email" type="text" placeholder="enter your email" >
+        <p style="color: red;" id="p3"></p>
+        <label for="pass">Password</label>
+        <input id="pass"  type="password" placeholder="enter your password" >
+        <p style="color: red;" id="p2"></p>
+        <label for="confirm">Confirm password</label>
+        <input id="confirm" type="password" placeholder="confirm your password">
+        <p style="color: red;" id="p"></p>
+        <button onsubmit="">Submit</button>
+
+    </form>
+    
+</body>
+<script>
+    function validate(){
+        let name=document.getElementById("name").value;
+        let p=document.getElementById("p1");
+        if(name==""){
+           p.innerHTML="Enter valid name";
+           return false;
+        }
+        else{
+
+            p.innerHTML="";
+            
+        }
+    let input=document.getElementById("email").value;
+    let p3=document.getElementById("p3");
+    
+        let pattern=/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+        if(pattern.test(input)){
+            p3.innerHTML="";
+            return true;
+
+        }
+        else{
+            p3.innerHTML="Enter valid Email"
+            return false;
+        }
+    }
+    function password(){
+        let pass=document.getElementById("pass").value;
+        let p=document.getElementById("p2");
+        if(pass==""){
+           p.innerHTML="Enter your password it is empty";
+           return false;
+        }
+        else{
+            p.innerHTML="";
+        }
+    
+    let pat= /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+    if(pat.test(pass)){
+        p.innerHTML="";
+        return true;
+    }
+    else{
+        p.innerHTML= "enter valid password that has<br> at least 8 characters<br> one uppercase letter<br> one lowercase letter<br> one number<br> and one special character";
+        return false;
+    }
+}
+    function confirmpass(){
+        let p1=document.getElementById("p");
+        let pass=document.getElementById("pass").value;
+    let con=document.getElementById("confirm").value;
+    if(pass!==con){
+        p1.innerHTML="password does not match"
+        return false;
+        
+    }
+    else{
+        p1.innerHTML="";
+        alert("registration Successful");
+        return true;
+    }
+
+}
+function allgood(){
+
+}
+
+</script>
+</html>

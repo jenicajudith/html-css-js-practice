@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>POST</title>
+</head>
+<script>
+    async function post(event) {
+        event.preventDefault();
+            let name=document.getElementById("name").value;
+            let dept=document.getElementById("dept").value;
+            let phn=document.getElementById("num").value;
+            let student={
+                name: name,
+                department: dept,
+                phone: phn
+            };
+            try{
+                const res=await fetch("https://jsonplaceholder.typicode.com/posts",{
+                    method:"post",
+                    headers:{
+                        "Content-Type":"application/json"
+                    },
+                    body:JSON.stringify(student)
+
+                }) 
+                const data = await res.json();
+                alert("registered successfully");
+                console.log(data);
+            }
+            catch(error)
+            {
+                alert("error");
+                console.log(error);
+            }
+
+        
+        
+    }
+</script>
+<body>
+    <form onsubmit="post(event)">
+        <label for="name">Student name</label>
+        <input id="name" type="text" placeholder="Enter name">
+        <br><br>
+        <label for="dept">Department</label>
+        <input id="dept" type="text" placeholder="Enter department">
+                <br><br>
+
+        <label for="num">Phone number</label>
+        <input id="num" type="tel" placeholder="Enter phone number">
+          <br><br>
+          <button>Submit</button>
+    </form>
+    
+</body>
+</html>
